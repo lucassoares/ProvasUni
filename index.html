@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Provas</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css" media="screen">
+      body{
+        background-color: #45AAE8;
+      } 
+      #pergunta{
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+        margin-bottom: 80px;
+        margin-top: 40px;
+        color: #1E4963;
+      }
+      .btnResposta{
+        background-color: #006DB0;
+        padding: 40px;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 30px;
+        color:white;
+      }
+      #respostaBtn{
+        color: white;
+        font-size: 200px;
+        text-align: center;
+      }
+      .btnResposta:hover{
+        background-color: #1E4963;
+      }
+      footer{
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 id="pergunta">TÁ SABENDO DA PROVA DA SEMANA QUE VEM??</h1>
+        </div>
+      </div>
+      <div class="row" id="linhaResposta">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="btnResposta" id="btnA">
+            TÔ
+          </div>
+          <div class="btnResposta" id="btnB">
+            FAÇO NEM IDEIA
+          </div>
+          <div class="btnResposta" id="btnC">
+            QUE PROVA?
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+
+    <footer>Desenvolvido por <a href="https://lucassoares.github.io">Lucas Soares</a></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#btnA').click(function(e){
+          $('#linhaResposta').html('<h1 id="respostaBtn">SAFE! </h1>');
+        });
+        $('#btnB').click(function(e){
+          $('#linhaResposta').html('<h1 id="respostaBtn">SE FODEU!! </h1>');
+        });
+        $('#btnC').click(function(e){
+          $('#linhaResposta').html('<h1 id="respostaBtn">VAI REPROVAR! </h1>');
+        });  
+      });
+    </script>
+  </body>
+</html>
